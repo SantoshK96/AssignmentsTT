@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="shortcut icon" href="images/logo_burned.ico" width="16" height="16" />
+		<link rel="stylesheet" href="style.css">
+
+		<title>Register Today!</title>
+	</head>
+	
+	<body>
+    <form id="myform">
+		<marquee behavior="scroll" direction="right">
+			<img id="banner" src="images/bannerl_burned.png "  height="50" alt="Banner Image"/>
+		</marquee>
+		<div class="mx-auto" style="padding:0 100px 100px 100px;">
+			<div class="mx-auto border border-primary" style="padding: 100px ;background: rgba(79,89,169,0.6)">
+				<img id="logo" src="images/logo_burned.ico" width="50" height="50" alt="Logo Image"/>
+				
+				<h3>Register Today!</h3>
+				
+				<div class="mx-auto form-row align-items-center">
+					<div class="col-md-4">
+						<label for="username">First name<span style="color:red"><sup> *</sup></span>
+							<input type="text" id="username" class="form-control sethis" placeholder="First name" autocomplete="off" >
+							<ul class="input-requirements">
+								<li>At least 3 characters long</li>
+								<li>Must only contain letters and numbers (no special characters)</li>
+							</ul>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label>Middle name
+						<input type="text" class="form-control" placeholder="Middle name" autocomplete="off">
+						<ul class="input-requirements"></ul>
+						</label>
+						
+					</div>
+					<div class="col-md-4">
+						<label>Last name
+						<input type="text" class="form-control" placeholder="Last name" autocomplete="off">
+						<ul class="input-requirements"></ul>
+						</label>
+					</div>
+				</div>
+				
+				<div id="ErrorName" class="text-danger font-weight-bold"></div>
+				
+				<div class="mx-auto form-row align-items-center">
+					<div class="form-group col ">
+						<label for="email">Email<span style="color:red"><sup> *</sup></span>
+						<input type="email" class="form-control sethis" Name="Email" id="email" placeholder="xyz@gmail.com" autocomplete="off">
+						<ul class="input-requirements">
+									<li>'@' is placed at incorrect position</li>
+									<li>Enter a valid email address(eg: abc@gmail.com)</li>
+								</ul>
+						</label>
+						<label for="phonenumber">Phone Number
+						<input type="text" class="form-control sethis" id="phonenumber" placeholder="98XXXXXX89">
+								<ul class="input-requirements">
+									<li>length must be 10</li>
+									<li>Contains only numbers</li>
+								</ul>
+						</label>
+						<div class="form-row align-items-center">
+							<div class="col-md-12">
+								<label for="password">Password<span style="color:red"><sup> *</sup></span>
+								<input type="password" class="form-control sethis" id="password" Name="Password" placeholder="Password" autocomplete="off">
+								<ul class="input-requirements">
+									<li>At least 8 characters long (and less than 100 characters)</li>
+									<li>Contains at least 1 number</li>
+									<li>Contains at least 1 lowercase letter</li>
+									<li>Contains at least 1 uppercase letter</li>
+									<li>Contains a special character (e.g. @ !)</li>
+								</ul>
+								</label>
+							</div>
+							<div class="col">
+								<label for="gender">Gender <span style="color:red"><sup> *</sup></span><div id="ErrorGender" class="ErrorMessage"></div>
+								<select required>
+									<option value="">Choose...</option>
+									<option value="1">Male</option>
+									<option value="2">Female</option>
+									<option value="3">Other</option>
+								</select>
+								</label>
+							</div>
+					
+						</div>
+						
+						
+						<label>Present Address<span style="color:red"><sup> *</sup></span>:</label>
+						<div class="form-row align-items-center">
+							<div class="col">
+							  <label for="city1">City
+							  <input type="text" class="form-control sethis" Name="PRCity" id="pecity" placeholder="City" >
+							  <ul class="input-requirements">
+									<li>Enter Your City name</li>
+							  </ul>
+							  </label>
+							</div>
+							<div class="col">
+							  <label for="state1">State
+							  <input type="text" class="form-control sethis" Name="PRState" id="pestate" placeholder="State" >
+							  <ul class="input-requirements">
+									<li>Enter Your State name</li>
+							  </ul>
+							  </label>
+							</div>
+							<div class="col">
+							  <label for="zip1">Zip
+							  <input type="text" class="form-control sethis" Name="PRZip" placeholder="Zip" id="zip1" >
+							  <ul class="input-requirements">
+									<li>Zip code must be of 4 digits</li>
+							  </ul>
+							  </label>
+							</div>
+						</div>
+						
+						<label>Permanent Address<span style="color:red"><sup> *</sup></span>:</label>
+						<div class="form-row align-items-center">
+							<div class="col">
+							  <label for="city2">City
+							  <input type="text" class="form-control sethis" Name="PECity"  id="prcity" placeholder="City" >
+							  <ul class="input-requirements">
+									<li>Enter Your City name</li>
+							  </ul>
+							  </label>
+							</div>
+							<div class="col">
+							  <label for="state2">State
+							  <input type="text" class="form-control sethis" Name="PEState"  id="prstate" placeholder="State" >
+							  <ul class="input-requirements">
+									<li>Enter Your State name</li>
+							  </ul>
+							  </label>
+							</div>
+							<div class="col">
+							  <label for="zip2">Zip
+							  <input type="text" class="form-control sethis" Name="PEZip" placeholder="Zip" id="zip2" >
+							  <ul class="input-requirements">
+									<li>Zip code must be of 4 digits</li>
+							  </ul>
+							  </label>
+							</div>
+						</div>
+						
+						
+					  <div class="form-group">
+						<label for="exampleFormControlSelect2">Interests</label>
+						<select multiple class="form-control" id="exampleFormControlSelect2">
+							<option>sports</option>
+							<option>books</option>
+							<option>computer & software</option>
+							<option>fashion</option>
+							<option>photography</option>
+						</select>
+					  </div>
+					  
+					  <div class="form-control">
+							<div class="col-md-4">
+								<span id="num1"></span>
+								<span id="oprt"></span>
+								<span id="num2"></span>
+								<span>=</span>
+							</div>
+							<div class="col-md-4">
+								<label for="capInput">
+									<input type="text" id="capInput" class="form-control sethis"  placeholder="  ?" autocomplete="off">
+									<ul class="input-requirements">
+										<li>correct answer</li>
+									</ul>
+								</label>
+								<span onclick="myFunction()"><img width="20" height="20" src="images/refresh.png"  ></span>
+							</div>
+								<!--<span onclick="myFunction()"><img width="20" height="20" src="images/refresh.png"  ></span>-->
+					  </div>
+						
+						
+					  <h6><span style="color:red"> * </span>fields are mandatory</h6>
+					  <!--<input type="submit" class="btn btn-primary">Submit</input>-->
+					  <input class="btn btn-primary" type="submit">
+					</div>
+			</div>
+		</div>
+			
+	</form>
+	
+
+    <!-- Optional JavaScript -->
+	<script src="main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
