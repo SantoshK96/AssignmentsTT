@@ -26,23 +26,24 @@
 					<div class="col">
 						<label for="username">First name<span style="color:red"><sup> *</sup></span>
 							<input type="text" id="username" class="form-control sethis" placeholder="First name" autocomplete="off" >
-							<ul class="input-requirements">
-								<li>At least 3 characters long</li>
-								<li>Must only contain letters and numbers (no special characters)</li>
-							</ul>
+							<!-- <ul class="input-requirements"> -->
+								<!-- <li>At least 3 characters long</li> -->
+								<!-- <li>Must only contain letters and numbers (no special characters)</li> -->
+							<!-- </ul> -->
+							<span class="errorMessage" id="usernameErrorMsg"></span>
 						</label>
 					</div>
 					<div class="col">
 						<label>Middle name
 						<input type="text" class="form-control" placeholder="Middle name" autocomplete="off">
-						<ul class="input-requirements"></ul>
+						<!-- <ul class="input-requirements"></ul> -->
 						</label>
 						
 					</div>
 					<div class="col">
 						<label>Last name
 						<input type="text" class="form-control" placeholder="Last name" autocomplete="off">
-						<ul class="input-requirements"></ul>
+						<!-- <ul class="input-requirements"></ul> -->
 						</label>
 					</div>
 				</div>
@@ -68,74 +69,79 @@
 					<div class="form-group col ">
 						<label for="email">Email<span style="color:red"><sup> *</sup></span>
 						<input type="email" class="form-control sethis" Name="Email" id="email" placeholder="xyz@gmail.com" autocomplete="off">
-						<ul class="input-requirements">
-									<li>'@' is placed at incorrect position</li>
-									<li>Enter a valid email address(eg: abc@gmail.com)</li>
-								</ul>
+						<!-- <ul class="input-requirements"> -->
+									<!-- <li>'@' is placed at incorrect position</li> -->
+									<!-- <li>Enter a valid email address(eg: abc@gmail.com)</li> -->
+								<!-- </ul> -->
+						<span class="errorMessage" id="emailErrorMsg"></span>
 						</label>
 						<label for="phonenumber">Phone Number
 						<input type="text" class="form-control sethis" id="phonenumber" placeholder="98XXXXXX89">
-								<ul class="input-requirements">
-									<li>length must be 10</li>
-									<li>Contains only numbers</li>
-								</ul>
+								<!-- <ul class="input-requirements"> -->
+									<!-- <li>length must be 10</li> -->
+									<!-- <li>Contains only numbers</li> -->
+								<!-- </ul> -->
 						</label>
 						<div class="form-row align-items-center">
 							<div class="col">
 								<label for="password">Password<span style="color:red"><sup> *</sup></span>
 								<input type="password" class="form-control sethis" id="password" Name="Password" placeholder="Password" autocomplete="off">
-								<ul class="input-requirements">
-									<li>At least 8 characters long (and less than 100 characters)</li>
-									<li>Contains at least 1 number</li>
-									<li>Contains at least 1 lowercase letter</li>
-									<li>Contains at least 1 uppercase letter</li>
-									<li>Contains a special character (e.g. @ !)</li>
-								</ul>
+								<!-- <ul class="input-requirements"> -->
+									<!-- <li>At least 8 characters long (and less than 100 characters)</li> -->
+									<!-- <li>Contains at least 1 number</li> -->
+									<!-- <li>Contains at least 1 lowercase letter</li> -->
+									<!-- <li>Contains at least 1 uppercase letter</li> -->
+									<!-- <li>Contains a special character (e.g. @ !)</li> -->
+								<!-- </ul> -->
+								<span class="errorMessage" id="passwordErrorMsg"></span>
 								</label>
 							</div>
 							
 							<div class="col">
 								<label >Confirm Password<span style="color:red"><sup> *</sup></span>
 								<input type="password" class="form-control sethis" id="confirmpassword" Name="ConfirmPassword" placeholder="Password" autocomplete="off">
-								<ul class="input-requirements">
-									<li>Enter Password again</li>
-								</ul>
+								<!-- <ul class="input-requirements"> -->
+									<!-- <li>Enter Password again</li> -->
+								<!-- </ul> -->
+								<span class="errorMessage" id="cnfpasswordErrorMsg"></span>
 							</div>
 						</div>
 						
 						
-						<label>Present Address<span style="color:red"><sup> *</sup></span>:</label>
+						<label>Present Address<span style="color:red"><sup> *</sup></span>:
+						<span class="errorMessage" id="addressErrorMsg"></span>
+						</label>
 						<div class="form-row align-items-center">
 							<div class="col">
 							  <label for="city1">City
-							  <input type="text" class="form-control sethis" Name="PRCity" id="pecity" placeholder="City" >
-							  <ul class="input-requirements">
-									<li>Enter Your City name</li>
-							  </ul>
+							  <input type="text" class="form-control sethis loopAdd" Name="PRCity" id="pecity" placeholder="City" >
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Enter Your City name</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 							<div class="col">
 							  <label for="state1">State
-							  <input type="text" class="form-control sethis" Name="PRState" id="pestate" placeholder="State" >
-							  <ul class="input-requirements">
-									<li>Enter Your State name</li>
-							  </ul>
+							  <input type="text" class="form-control sethis loopAdd" Name="PRState" id="pestate" placeholder="State" >
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Enter Your State name</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 							<div class="col">
 							  <label>Country
-							  <input type="text" class="form-control sethis" Name="PRCountry"  id="prcountry" placeholder="Country" >
-							  <ul class="input-requirements">
-									<li>Enter Your Country name</li>
-							  </ul>
+							  <input type="text" class="form-control sethis loopAdd" Name="PRCountry"  id="prcountry" placeholder="Country" >
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Enter Your Country name</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 							<div class="col">
 							  <label for="zip1">Zip
 							  <input type="text" class="form-control sethis" Name="PRZip" placeholder="Zip" id="zip1" >
-							  <ul class="input-requirements">
-									<li>Zip code must be of 4 digits</li>
-							  </ul>
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Zip code must be of 4 digits</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 						</div>
@@ -145,34 +151,34 @@
 							
 							<div class="col">
 							  <label for="city2">City
-							  <input type="text" class="form-control sethis" Name="PECity"  id="prcity" placeholder="City" >
-							  <ul class="input-requirements">
-									<li>Enter Your City name</li>
-							  </ul>
+							  <input type="text" class="form-control sethis loopAdd" Name="PECity"  id="prcity" placeholder="City" >
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Enter Your City name</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 							<div class="col">
 							  <label for="state2">State
-							  <input type="text" class="form-control sethis" Name="PEState"  id="prstate" placeholder="State" >
-							  <ul class="input-requirements">
-									<li>Enter Your State name</li>
-							  </ul>
+							  <input type="text" class="form-control sethis loopAdd" Name="PEState"  id="prstate" placeholder="State" >
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Enter Your State name</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 							<div class="col">
 							  <label>Country
-							  <input type="text" class="form-control sethis" Name="PECountry"  id="pecountry" placeholder="Country" >
-							  <ul class="input-requirements">
-									<li>Enter Your Country name</li>
-							  </ul>
+							  <input type="text" class="form-control sethis loopAdd" Name="PECountry"  id="pecountry" placeholder="Country" >
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Enter Your Country name</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 							<div class="col">
 							  <label for="zip2">Zip
 							  <input type="text" class="form-control sethis" Name="PEZip" placeholder="Zip" id="zip2" >
-							  <ul class="input-requirements">
-									<li>Zip code must be of 4 digits</li>
-							  </ul>
+							  <!-- <ul class="input-requirements"> -->
+									<!-- <li>Zip code must be of 4 digits</li> -->
+							  <!-- </ul> -->
 							  </label>
 							</div>
 						</div>
@@ -212,9 +218,10 @@
 							<div class="col-md-4">
 								<label for="capInput">
 									<input type="text" id="capInput" class="form-control sethis"  placeholder="  ?" autocomplete="off">
-									<ul class="input-requirements">
-										<li>correct answer</li>
-									</ul>
+									<!-- <ul class="input-requirements"> -->
+										<!-- <li>correct answer</li> -->
+									<!-- </ul> -->
+									<span class="errorMessage" id="captchaErrorMsg"></span>
 								</label>
 								<span onclick="myFunction()"><img width="20" height="20" src="images/refresh.png"  ></span>
 							</div>

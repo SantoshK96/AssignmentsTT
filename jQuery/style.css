@@ -42,6 +42,9 @@ h3,h6{
 	content: "\2713";
 }
 
+.errorMessage {
+	color: #ff0000;
+}
 /*input:not([type="submit"]):valid {
   border-color: #2ecc71;
 }
