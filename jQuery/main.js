@@ -26,24 +26,25 @@ $(function(){
 	$("#passwordErrorMsg").hide();
 	$("#captchaErrorMsg").hide();
 	$("#cnfpasswordErrorMsg").hide();
-	
+	$("#genderErrorMsg").hide();
+	$("#phonenoErrorMsg").hide();
+	$("#addressErrorMsg").hide();
 	var error_username = false;
 	var error_password = false;
 	var error_cnfpassword = false;
 	var error_email=false;
 	var error_captcha = false;
 	var error_address = false;
-
-	$('.loopAdd').each(function(i, obj) {
-    //test
-		$(this).focusout(function(){
-			check_address($(this));
-		});
-	});
-	
+	var error_gender= false;
+	var error_phoneno = false;
+	var error_address = false;
 	
 	$("#username").focusout(function(){
 		check_username();
+	});
+	
+	$("#address").focusout(function(){
+		check_address();
 	});
 	
 	$("#email").focusout(function(){
@@ -62,20 +63,27 @@ $(function(){
 		check_captcha();
 	});
 	
-	function check_address(input){	
-		if(input.length < 3){
-			$("#addressErrorMsg").html("Should be atleast 3 characters");
-			$("#addressErrorMsg").show();
-			error_address=true;
-			
-		}
-		else{
+	$("#gender").focusout(function(){
+		check_gender();
+	});
+	
+	$("#phonenumber").focusout(function(){
+		check_phonenumber();
+	});
+	
+	function check_address() {
+		$('.loopAdd').each(function() {
+    if ( $(this).val() !== '' ) {
 			error_address=false;
 			$("#addressErrorMsg").hide();
-			
-		}
-		
-	}
+    }
+    else {
+		$("#addressErrorMsg").html("All Address Fields are not filled");
+			$("#addressErrorMsg").show();
+			error_address=true;
+    }
+  });
+}
 	
 	function check_username(){	
 		var username_length = $('#username').val().length;
@@ -87,6 +95,19 @@ $(function(){
 		else{
 			error_username=false;
 			$("#usernameErrorMsg").hide();
+		}
+	}
+
+	function check_phonenumber(){	
+		var phonenumber = $('#phonenumber').val();
+		if(phonenumber.length!=10 || !$.isNumeric(phonenumber)){
+			$("#phonenoErrorMsg").html("Should be numeric of length 10");
+			$("#phonenoErrorMsg").show();
+			error_phoneno=true;
+		}
+		else{
+			error_phoneno=false;
+			$("#phonenoErrorMsg").hide();
 		}
 	}
 	
@@ -122,8 +143,6 @@ $(function(){
 		}
 	}
 	function check_cnfpassword(){	
-		// at least one number, one lowercase and one uppercase letter
-		// at least six characters
 		var cnfpassword_value = $('#confirmpassword').val();
 		var pattern = $('#password').val();
     
@@ -150,6 +169,18 @@ $(function(){
 			$("#captchaErrorMsg").hide();
 		}
 	}	
+	
+	function check_gender(){
+			if (!$("input[name='optradio']:checked").val()) {
+			$("#genderErrorMsg").html("Please Select your gender");
+			$("#genderErrorMsg").show();
+			}
+			else {
+			error_gender= false;
+			$("#genderErrorMsg").hide();
+			}
+	}
+	
 
 		$("#myform").submit(function(){
 			error_username = false;
@@ -158,14 +189,18 @@ $(function(){
 			error_password=false;
 			error_cnfpassword=false;
 			error_address=false;
+			error_gender = false;
+			error_phoneno=false;
+			error_address=false;
 			check_username();
 			check_email();
 			check_captcha();
 			check_password();
 			check_cnfpassword();
+			check_gender();
+			check_phonenumber();
 			check_address();
-			//check_password();
-			if(error_username==false && error_captcha==false && error_email==false && error_password==false && error_cnfpassword==false && error_address==false){
+			if(error_address==false && error_phoneno==false && error_username==false && error_captcha==false && error_email==false && error_password==false && error_cnfpassword==false && error_address==false && error_gender==false){
 				return true;
 			} else {
 				return false;
