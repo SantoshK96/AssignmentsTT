@@ -25,5 +25,28 @@ h3,h6{
 
 .required:after { content:" * "; color:red;}
 
+.input-requirements {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: left;
+  list-style: disc;
+  list-style-position: inside;
+  max-width: 400px;
+  margin: auto;
+  color: rgb(255,140,0);
+}
+
+input:not([type="submit"]) + .input-requirements {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease-out;  
+}
+
+input:not([type="submit"]):hover + .input-requirements,
+input:not([type="submit"]):focus + .input-requirements,
+input:not([type="submit"]):active + .input-requirements {
+  max-height: 500px; /* any large number (bigger then the .input-requirements list) */
+  transition: max-height 1s ease-in;
+}
 
 

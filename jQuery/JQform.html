@@ -5,204 +5,232 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="shortcut icon" href="images/logo_burned.ico" width="16" height="16" />
-		<link rel="stylesheet" href="style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+		<link rel="stylesheet" href="style.css">	
 		<title>Register Today!</title>
 	</head>
 	
 	<body>
-    <form id="myform">
-		<marquee behavior="scroll" direction="right">
-			<img id="banner" src="images/bannerl_burned.png "  height="50" alt="Banner Image"/>
-		</marquee>
-		
-		<div class="mx-auto" style="padding:0 100px 100px 100px;">
-			<div class="mx-auto border border-primary" style="padding: 100px ;background: rgba(79,89,169,0.6)">
-				<img id="logo" src="images/logo_burned.ico" width="50" height="50" alt="Logo Image"/>
-				<h3>Register Today!</h3>
-				<div class="form-row align-items-center">
-					<div class="col">
-						<label class="required" for="username">First name</label>
-							<input type="text" id="username" class="form-control sethis" placeholder="First name" autocomplete="off" >
-							
-							<span class="errorMessage" id="usernameErrorMsg"></span>
-					</div>
-					<div class="col">
-						<label>Middle name</label>
-						<input type="text" class="form-control" placeholder="Middle name" autocomplete="off">
-					</div>
-					<div class="col">
-						<label>Last name</label>
-						<input type="text" class="form-control" placeholder="Last name" autocomplete="off">
-					</div>
+    <form id="myform" method="POST">
+	<marquee behavior="scroll" direction="right">
+		<img id="banner" src="images/bannerl_burned.png "  height="50" alt="Banner Image"/>
+	</marquee>
+	<div class="mx-auto" style="padding:0 100px 100px 100px;">
+		<div class="mx-auto border border-primary" style="padding: 100px ;background: rgba(79,89,169,0.6)">
+			<img id="logo" src="images/logo_burned.ico" width="50" height="50" alt="Logo Image"/>
+			<h3>Register Today!</h3>
+			
+			<div class=" mx-auto form-row align-items-center">
+				<div class="col">
+					<label class="required" for="username">First name</label>
+						<input type="text" id="username" class="form-control sethis" placeholder="First name" autocomplete="off" >
+						<ul class="input-requirements">
+							<li>Should be between 5 - 20 characters</li>
+						</ul>
 				</div>
-				
-				<div class="mx-auto form-row align-items-center">
-					<div class="form-group col " id="gender">
-						<label class="required">Gender</label>
-						<div class="form-check form-check-inline">
-								  <input class="form-check-input" type="radio" name="optradio" value="option1">
-								  <label class="form-check-label" for="inlineCheckbox1">Male</label>
-						</div>
-						<div class="form-check form-check-inline">
-								  <input class="form-check-input" type="radio" name="optradio" value="option1">
-								  <label class="form-check-label" for="inlineCheckbox1">Female</label>
-						</div>
-						<div class="form-check form-check-inline">
-								  <input class="form-check-input" type="radio" name="optradio" value="option1">
-								  <label class="form-check-label" for="inlineCheckbox1">Other</label>
-						</div>
-					<span class="errorMessage" id="genderErrorMsg"></span>
-					</div>
+				<div class="col">
+					<label>Middle name</label>
+					<input type="text" class="form-control" placeholder="Middle name" autocomplete="off">
 				</div>
-				<div class="mx-auto form-row align-items-center">
-					<div class="form-group col ">
-						<label class="required" for="email">Email</label>
-						<input type="email" class="form-control sethis" Name="Email" id="email" placeholder="xyz@gmail.com" autocomplete="off">
-						<span class="errorMessage" id="emailErrorMsg"></span>
-					
-						<label class="required" for="phonenumber">Phone Number</label>
-						<input type="text" class="form-control sethis" id="phonenumber" placeholder="98XXXXXX89">
-						<span class="errorMessage" id="phonenoErrorMsg"></span>
-						
-						<div class="form-row align-items-center">
-							<div class="col">
-								<label class="required" for="password">Password</label>
-								<input type="password" class="form-control sethis" id="password" Name="Password" placeholder="Password" autocomplete="off">
-								
-								<span class="errorMessage" id="passwordErrorMsg"></span>
-								
-							</div>
-							
-							<div class="col">
-								<label class="required" >Confirm Password</label>
-								<input type="password" class="form-control sethis" id="confirmpassword" Name="ConfirmPassword" placeholder="Password" autocomplete="off">
-								
-								<span class="errorMessage" id="cnfpasswordErrorMsg"></span>
-								
-							</div>
-						</div>
-						
-						<div id="address">
-						<label class="required">Present Address:</label>
-						<span class="errorMessage" id="addressErrorMsg"></span>
-						
-						
-						<div class="form-row align-items-center">
-							<div class="col">
-							  <label for="city1">City
-							  <input type="text" class="form-control sethis loopAdd" Name="PRCity" id="pecity" placeholder="City" >
-							 
-							  </label>
-							</div>
-							<div class="col">
-							  <label for="state1">State
-							  <input type="text" class="form-control sethis loopAdd" Name="PRState" id="pestate" placeholder="State" >
-							  
-							  </label>
-							</div>
-							<div class="col">
-							  <label>Country
-							  <input type="text" class="form-control sethis loopAdd" Name="PRCountry"  id="prcountry" placeholder="Country" >
-						
-							  </label>
-							</div>
-							<div class="col">
-							  <label for="zip1">Zip
-							  <input type="text" class="form-control sethis loopAdd" Name="PRZip" placeholder="Zip" id="zip1" >
-							 
-							  </label>
-							</div>
-						</div>
-						
-						<label class="required">Permanent Address:</label>
-						<div class="form-row align-items-center">
-							
-							<div class="col">
-							  <label for="city2">City
-							  <input type="text" class="form-control sethis loopAdd" Name="PECity"  id="prcity" placeholder="City" >
-							 
-							  </label>
-							</div>
-							<div class="col">
-							  <label for="state2">State
-							  <input type="text" class="form-control sethis loopAdd" Name="PEState"  id="prstate" placeholder="State" >
-							 
-							  </label>
-							</div>
-							<div class="col">
-							  <label>Country
-							  <input type="text" class="form-control sethis loopAdd" Name="PECountry"  id="pecountry" placeholder="Country" >
-							 
-							  </label>
-							</div>
-							<div class="col">
-							  <label for="zip2">Zip
-							  <input type="text" class="form-control sethis loopAdd" Name="PEZip" placeholder="Zip" id="zip2" >
-							 
-							  </label>
-							</div>
-						</div>
-						</div>
-						
-						<label for="exampleFormControlSelect2">Interests</label>
-					  <div class="form-check form-check-inline">
-						  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-						  <label class="form-check-label" for="inlineCheckbox1">sports</label>
-						</div>
-						<div class="form-check form-check-inline">
-						  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-						  <label class="form-check-label" for="inlineCheckbox2">books</label>
-						</div>
-						<div class="form-check form-check-inline">
-						  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
-						  <label class="form-check-label" for="inlineCheckbox3">computer & software</label>
-						</div>
-						<div class="form-check form-check-inline">
-						  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-						  <label class="form-check-label" for="inlineCheckbox2">fashion</label>
-						</div>
-						<div class="form-check form-check-inline">
-						  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option3" >
-						  <label class="form-check-label" for="inlineCheckbox3">photography</label>
-						</div>
-						
-						
-					  <div class="form-control">
-							<div class="col-md-4">
-								<span id="num1"></span>
-								<span id="oprt"></span>
-								<span id="num2"></span>
-								<span>=</span>
-							</div>
-							<div class="col-md-4">
-								<label for="capInput">
-									<input type="text" id="capInput" class="form-control sethis"  placeholder="  ?" autocomplete="off">
-									
-									<span class="errorMessage" id="captchaErrorMsg"></span>
-								</label>
-								<span onclick="myFunction()"><img width="20" height="20" src="images/refresh.png"  ></span>
-							</div>
-								
-					  </div>
-						
-						
-					  <h6><span style="color:red"> * </span>fields are mandatory</h6>
-					 
-					  <input class="btn btn-primary" class="submit" type="submit">
-					</div>
+				<div class="col">
+					<label>Last name</label>
+					<input type="text" class="form-control" placeholder="Last name" autocomplete="off">
+				</div>
 			</div>
+			<div class="mx-auto form-row align-items-center">
+			<div class="col">
+			<span class="errorMessage" id="usernameErrorMsg"></span>
+			</div>
+			</div>
+			<div class="mx-auto form-row align-items-center">
+				<div class="form-group col " id="gender">
+					<label class="required">Gender</label>
+					<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="optradio" value="option1">
+							  <label class="form-check-label" for="inlineCheckbox1">Male</label>
+					</div>
+					<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="optradio" value="option1">
+							  <label class="form-check-label" for="inlineCheckbox1">Female</label>
+					</div>
+					<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="optradio" value="option1">
+							  <label class="form-check-label" for="inlineCheckbox1">Other</label>
+					</div>
+				<span class="errorMessage" id="genderErrorMsg"></span>
+				</div>
+			</div>
+			<div class="mx-auto form-row align-items-center">
+				<div class="form-group col ">
+					<label class="required" for="email">Email</label>
+					<input type="email" class="form-control sethis" Name="Email" id="email" placeholder="xyz@gmail.com" autocomplete="off">
+					<ul class="input-requirements">
+								<li>Email should follow the format : "abc@gmail.com"</li>
+						</ul>
+					<div class="errorMessage" id="emailErrorMsg"></div>
+				
+					<label class="required" for="phonenumber">Phone Number</label>
+					<input type="text" class="form-control sethis" id="phonenumber" placeholder="98XXXXXX89">
+					<ul class="input-requirements">
+								<li>phone number should be in the form eg: "+91 9XXXXXXXXX0 or 09XXXXXXXXX0 or 9XXXXXXXXX0"</li>
+					</ul>
+					<span class="errorMessage" id="phonenoErrorMsg"></span>
+					
+					<div class="form-row align-items-center">
+						<div class="col">
+							<label class="required" for="password">Password</label>
+							<input type="password" class="form-control sethis" id="password" Name="Password" placeholder="Password" autocomplete="off">
+							<ul class="input-requirements">
+								<li>At least 6 characters long (and less than 100 characters)</li>
+								<li>Contains at least 1 number</li>
+								<li>Contains at least 1 lowercase letter</li>
+								<li>Contains at least 1 uppercase letter</li>
+								<li>Contains a special character (e.g. @ !)</li>
+							</ul>
+						</div>
+						
+						<div class="col">
+							<label class="required" >Confirm Password</label>
+							<input type="password" class="form-control sethis" id="confirmpassword" Name="ConfirmPassword" placeholder="Password" autocomplete="off">
+						</div>
+					</div>
+					
+					<div class="form-row align-items-center">
+						<div class="col">
+							<span class="errorMessage" id="passwordErrorMsg"></span>
+						</div>
+						<div class="col">
+							<span class="errorMessage" id="cnfpasswordErrorMsg"></span>
+						</div>
+					</div>
+					
+					<div id="address" class="mx-auto form-row align-items-center ">
+						
+						<div class="col" >
+						<label class="required">Present Address:</label>
+																						
+							
+							<label>Country:</label>
+							<select id="pecountry" name="country" class="form-control">
+								<option value="">-Select Country-</option>
+							</select>
+							<span class="errorMessage" id="pecountryErrorMsg"></span>
+
+
+							<label>State:</label>
+							<select id="pestate" name="state" class="form-control">
+								<option value="">-Select State-</option>
+							</select>
+							<span class="errorMessage" id="pestateErrorMsg"></span>
+
+
+							<label>City:</label>
+							<select id="pecity" name="city" class="form-control">
+							<option value="">-Select City-</option>
+							</select>
+							<span class="errorMessage" id="pecityErrorMsg"></span>
+
+							<label for="zip1">Zip
+							<input type="text" class="form-control sethis" Name="PRZip" placeholder="Zip" id="zip" >
+							<ul class="input-requirements">
+								<li>Should only contain numeric of length 5</li>
+							</ul>
+							</label>
+							<span class="errorMessage" id="zipErrorMsg"></span>
+							
+				
+						</div>
+						
+					<div class="col">
+					<label class="required">Permanent Address:</label>
+					
+						<label>Country:</label>
+						<select id="prcountry" name="country" class="form-control">
+							<option value="">-Select Country-</option>
+						</select>
+						<span class="errorMessage" id="prcountryErrorMsg"></span>
+
+						<label>State:</label>
+						<select id="prstate" name="state" class="form-control">
+							<option value="">-Select State-</option>
+						</select>
+						<span class="errorMessage" id="prstateErrorMsg"></span>
+
+						 <label>City:</label>
+						<select id="prcity" name="city" class="form-control">
+							<option value="">-Select City-</option>
+						</select>
+						<span class="errorMessage" id="prcityErrorMsg"></span>
+
+						 <label for="zip2">Zip
+						<input type="text" class="form-control sethis" Name="PEZip" placeholder="Zip" id="zip2" >
+						<ul class="input-requirements">
+							<li>Should only contain numeric of length 5</li>
+						</ul>
+						</label>
+						 <span class="errorMessage" id="zipErrorMsg2"></span>
+						</div>
+
+					
+					</div>
+					<label for="exampleFormControlSelect2">Interests</label>
+				  <div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+					  <label class="form-check-label" for="inlineCheckbox1">sports</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+					  <label class="form-check-label" for="inlineCheckbox2">books</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+					  <label class="form-check-label" for="inlineCheckbox3">computer & software</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
+					  <label class="form-check-label" for="inlineCheckbox2">fashion</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option3" >
+					  <label class="form-check-label" for="inlineCheckbox3">photography</label>
+					</div>
+					
+					
+				  <div class="form-control">
+						<div class="col-md-4">
+							<span id="num1"></span>
+							<span id="oprt"></span>
+							<span id="num2"></span>
+							<span>=</span>
+						</div>
+						<div class="col-md-4">
+							<label for="capInput">
+								<input type="text" id="capInput" class="form-control sethis"  placeholder="  ?" autocomplete="off">
+								
+								<span class="errorMessage" id="captchaErrorMsg"></span>
+							</label>
+							<span onclick="captchaFunction()"><img width="20" height="20" src="images/refresh.png"  ></span>
+						</div>
+							
+				  </div>
+					
+					
+				  <h6><span style="color:red"> * </span>fields are mandatory</h6>
+				 
+				  <input class="btn btn-primary" class="submit" type="submit">
+				</div>
 		</div>
+	</div>
 			
 	</form>
 	
 
     <!-- Optional JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="populate.js"></script>
 	<script src="main.js"></script>
-	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
