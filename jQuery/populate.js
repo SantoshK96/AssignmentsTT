@@ -21,7 +21,7 @@ $("#pecountry").change(function(){
 	$.each(country,function(key,value){
 		if(value.CountryName==$("#pecountry").val()){
 			state=value.States;
-			stateSelect+="<option value='select'>--Select State--</option>";
+			stateSelect+="<option value='select'>-Select State-</option>";
 			$.each(state,function(key,value){
 				stateSelect+="<option value='"+value.StateName+"'>"+value.StateName+"</option>";
 			});
@@ -36,7 +36,7 @@ $("#pestate").change(function(){
 		if(value.StateName==$("#pestate").val()){
 			city=value.Cities;
 			if(city.length!=0){
-				citySelect+="<option value='select'>--Select City--</option>";
+				citySelect+="<option value='select'>-Select City-</option>";
 			}
 			$.each(city,function(key,value){
 				citySelect+="<option value='"+value+"'>"+value+"</option>";
@@ -53,7 +53,7 @@ $("#prcountry").change(function(){
 	$.each(country,function(key,value){
 		if(value.CountryName==$("#prcountry").val()){
 			state=value.States;
-			stateSelect+="<option value='select'>--Select State--</option>";
+			stateSelect+="<option value='select'>-Select State-</option>";
 			$.each(state,function(key,value){
 				stateSelect+="<option value='"+value.StateName+"'>"+value.StateName+"</option>";
 			});
@@ -68,7 +68,7 @@ $("#prstate").change(function(){
 		if(value.StateName==$("#prstate").val()){
 			city=value.Cities;
 			if(city.length!=0){
-				citySelect+="<option value='select'>--Select City--</option>";
+				citySelect+="<option value='select'>-Select City-</option>";
 			}
 			$.each(city,function(key,value){
 				citySelect+="<option value='"+value+"'>"+value+"</option>";

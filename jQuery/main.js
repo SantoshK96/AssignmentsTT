@@ -1,5 +1,5 @@
 var cap_ans=0;
-	var lock_cnfPasswd=1;
+var lock_cnfPasswd=1;
 
 
 function captchaFunction(){
@@ -18,8 +18,7 @@ function captchaFunction(){
 		}
 	}
 $(function(){
-	//--variables for captcha function
-		captchaFunction();
+	captchaFunction();
 	
 	// --Error Message Variables
 	var usernameErrorMsg=$("#usernameErrorMsg");
@@ -95,9 +94,6 @@ $(function(){
 	var error_prcountry=false;
 	var error_prstate=false;
 	var error_prcity=false;
-	
-	//--captcha function
-	
 	
 	//--validation functions
 	function check_country(input,emessage,errorindex){
@@ -238,7 +234,7 @@ $(function(){
 	}
 
 	function check_captcha(){
-		var input = $('#capInput').val();
+		var input = captcha.val();
 		if(cap_ans != parseInt(input))
 		{
 			captchaErrorMsg.html("Invalid captcha entered");
